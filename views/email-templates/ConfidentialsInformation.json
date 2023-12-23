@@ -1,0 +1,37 @@
+{
+  "template2": {
+    "name": "ConfidentialInformation",
+    "description": "Confidential information of  user : {uid} -- Account : {uacc}",
+    "button": {
+      "class": "btn btn-secondary btn-edit-template",
+      "data-template-id": "2",
+      "data-template-name": "ConfidentialInformation",
+      "text": "Edit"
+    }
+  },
+  "content": {
+    "id": "ConfidentialInformationTemplate", 
+    "style": "display: legacy;",
+    "textarea": {
+      "class": "form-control",
+      "name": "content",
+      "id": "description",
+      "cols": "30",
+      "rows": "20",
+      "style": "width:100%;",
+      "text": [
+        "Hello {fname},",
+        "",
+        "User ID : {uid}",
+        "User Password : {upass}",
+        "Account number: {uacc}",
+        "Master Password : {mpass}",
+        "Investor password: {investorPassword}",
+        "Your dashboard can be viewed at: {baseurl}",
+        "Thank you and good luck!",
+        "from Alpha Edge CG",
+        "---------------------------------------------------------------------------------"
+      ]
+    }
+  }
+}

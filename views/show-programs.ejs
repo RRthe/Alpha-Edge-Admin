@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+<div class="dashboard-wrapper d-flex" id="wrapper">
+  <%- include('partials/sidebar') %> 
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="mt-5 mb-4">
+                    <h2>Welcome, Admin</h2>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Programs</strong>
+                        <button class="btn btn-success float-right" onclick="location.href='views/create-programs'">Add Program</button>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Program Name</th>
+                                    <th scope="col">Platform</th>
+                                    <th scope="col">Starting Balance</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% programs.forEach(function(program) { %>
+                                    <tr>
+                                        <th scope="row"><%= program._id %></th>
+                                        <td><%= program.programName %></td>
+                                        <td><%= program.accountPlatform %></td>
+                                        <td>$<%= program.initialBalance.toLocaleString() %></td>
+                                        <td>
+                                            <a href="/program/<%= program._id %>" class="btn btn-info btn-sm">Edit</a>
+                                            <form action="/delete-program/<%= program._id %>" method="POST" style="display: inline;">
+                                              <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                          </form>
+                                      </td>
+                                  </tr>
+                              <% }) %>
+                          </tbody>
+                      </table>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

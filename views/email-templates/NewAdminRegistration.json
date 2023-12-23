@@ -1,0 +1,97 @@
+{
+  "template": {
+    "name": "NewAdminRegistered",
+    "description": "NewAdminRegistered",
+    "templateContent": [
+      {
+        "tag": "tr",
+        "content": [
+          {
+            "tag": "td",
+            "text": "NewAdminRegistered"
+          },
+          {
+            "tag": "td",
+            "text": "NewAdminRegistered - {Alpha Edge CG}"
+          },
+          {
+            "tag": "td",
+            "content": [
+              {
+                "tag": "button",
+                "attributes": {
+                  "class": "btn btn-secondary btn-edit-template",
+                  "data-template-id": "4",
+                  "data-template-name": "NewAdminRegistered"
+                },
+                "text": "Edit"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "tr",
+        "attributes": {
+          "id": "newAdminRegisteredTemplate",
+          "style": "display: legacy;"
+        },
+        "content": [
+          {
+            "tag": "td",
+            "attributes": {
+              "colspan": "4"
+            },
+            "content": [
+              {
+                "tag": "div",
+                "content": [
+                  {
+                    "tag": "p",
+                    "text": "DO NOT REPLY. THIS IS AN AUTO-GENERATED EMAIL"
+                  },
+                  {
+                    "tag": "p",
+                    "text": "------------------------------------------------------------"
+                  },
+                  {
+                    "tag": "p",
+                    "text": "New admin account was registered with following details:"
+                  },
+                  {
+                    "tag": "p",
+                    "text": "User id: <%= uid %>"
+                  },
+                  {
+                    "tag": "p",
+                    "text": "Email: <%= email %>"
+                  },
+                  {
+                    "tag": "p",
+                    "text": "Password: <%= password %>"
+                  },
+                  {
+                    "tag": "p",
+                    "text": "URL: <%= baseurl %>"
+                  },
+                  {
+                    "tag": "p",
+                    "text": "Site Admin"
+                  },
+                  {
+                    "tag": "p",
+                    "text": "<%= site_name %>"
+                  },
+                  {
+                    "tag": "p",
+                    "text": "-------------------------------------------------------------------------------------------------"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "template": {
+    "name": "NewUserAccount",
+    "description": "New User Account - Alpha Edge CG",
+    "button": {
+      "class": "btn btn-secondary btn-edit-template",
+      "data-template-id": "6",
+      "data-template-name": "NewTradingAccount",
+      "text": "Edit"
+    }
+  },
+  "content": {
+    "id": "NewTradingAccountTemplate", 
+    "style": "display: legacy;",
+    "textarea": {
+      "class": "form-control",
+      "name": "content",
+      "id": "description",
+      "cols": "30",
+      "rows": "10",
+      "style": "width:100%;",
+      "text": [
+        "DO NOT REPLY. THIS IS AUTOMATICALLY GENERATED EMAIL.",
+        "----------------------------------------------------------------------------------------",
+        "A new trading account is created for you under this email and username - {uid} at {site_name}",
+        "Program name: {program_name}",
+        "Account platform: {AccountPlatform}",
+        "Broker / Server: {BrokerDetails} / {tradeserver}",
+        "Account number: {uacc}",
+        "Master password: {masterpassword}",
+        "Investor password: {investorPassword}",
+        "Your dashboard can be viewed at: {baseurl}",
+        "Thank you and good luck!",
+        "from Alpha Edge CG",
+        "---------------------------------------------------------------------------------"
+      ]
+    }
+  }
+}

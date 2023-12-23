@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <style>
+        /* Add your CSS styles here */
+        .email-templates-container {
+            margin-top: 20px;
+        }
+
+        .email-templates-container h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .email-templates-container .btn-primary {
+            padding: 10px 15px;
+            margin-bottom: 20px;
+        }
+
+        .email-templates-container table {
+            width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .email-templates-container th {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .email-templates-container td,
+        .email-templates-container th {
+            text-align: left;
+            padding: 12px 15px;
+        }
+
+        .email-templates-container .btn-secondary {
+            color: #fff;
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        /* Additional styles can be added here as needed */
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-wrapper d-flex" id="wrapper">
+        <%- include('partials/sidebar') %> 
+
+
+        <main class="p-4 w-100">
+            <header class="d-flex justify-content-between align-items-center pb-3">
+                <div class="header-search">
+                    <input type="search" class="form-control" placeholder="Search...">
+                </div>
+                <div class="user-profile">
+                    <span>Welcome, Admin</span>
+                    <a href="/logout" class="btn btn-danger btn-sm ml-3">Log Out</a>
+                </div>
+            </header>
+            <section class="content-area">
+                <div class="welcome-banner mb-3">
+                    <h1></h1>
+                </div>
+                <div class="email-templates-container">                   
+                    <div class="email-templates-container">
+                        <h1>Email Templates</h1>
+                        <button class="btn btn-primary" onclick="location.href='/scripts/email-templates'">Add Message Template</button>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>AccountBreachAlert</td>
+                                            <td>Account breach alert - Alpha Edge CG</td>
+                                            <td>
+                                                <button class="btn btn-secondary btn-edit-template" data-template-id="1"
+                                                data-template-name="AccountBreachAlert"
+                                                data-toggle="modal" data-target="#editEmailTemplateModal">
+                                                    Edit
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Confidential Information</td>
+                                            <td>Confidential information of user : {uid} -- Account : {uacc}</td>
+                                            <td>
+                                                <button class="btn btn-secondary btn-edit-template" data-template-id="2"
+                                                    data-template-name="Confidential Information" 
+                                                    data-toggle="modal" data-target="#editEmailTemplateModal">
+                                                    Edit
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>ForgotPassword</td>
+                                            <td>Password requested - {site_name}</td>
+                                            <td>
+                                                <button class="btn btn-secondary btn-edit-template" data-template-id="3" 
+                                                    data-template-name="ForgotPassword"
+                                                    data-toggle="modal" data-target="#editEmailTemplateModal">
+                                                    Edit
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>NewAdminRegistered</td>
+                                            <td>New admin account registered - {site_name}</td>
+                                            <td>
+                                                <button class="btn btn-secondary btn-edit-template" data-template-id="4"
+                                                    data-template-name="NewAdminRegistered" 
+                                                    data-toggle="modal" data-target="#editEmailTemplateModal">
+                                                    Edit
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>NewTradingAccount</td>
+                                            <td>New trading account created at {site_name}</td>
+                                            <td>
+                                                <button class="btn btn-secondary btn-edit-template" data-template-id="5"
+                                                    data-template-name="NewTradingAccount" 
+                                                    data-toggle="modal" data-target="#editEmailTemplateModal">
+                                                    Edit
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>NewUserAccount</td>
+                                            <td>New user account created at {site_name}</td>
+                                            <td>
+                                                <button class="btn btn-secondary btn-edit-template" data-template-id="6" 
+                                                data-template-name="NewUserAccount"
+                                                    data-toggle="modal" data-target="#editEmailTemplateModal">
+                                                    Edit
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Payout Request</td>
+                                            <td>{uacc} - Payout Request</td>
+                                            <td>
+                                                <button class="btn btn-secondary btn-edit-template" data-template-id="7" 
+                                                data-template-name="Payout Request"
+                                                    data-toggle="modal" data-target="#editEmailTemplateModal">
+                                                    Edit
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>TargetReachedAlert</td>
+                                            <td>Target reached alert - {site_name}</td>
+                                            <td>
+                                                <button class="btn btn-secondary btn-edit-template" data-template-id="8"
+                                                    data-template-name="TargetReachedAlert" data-toggle="modal" 
+                                                    data-target="#editEmailTemplateModal">
+                                                    Edit
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+    <!-- Bootstrap Modal for Adding/Editing Email Templates -->
+    <!-- editEmailTemplateModal.ejs content -->
+    <!-- Modal for Editing Email Templates -->
+    <form id="editEmailTemplateForm" method="POST" action="/email-templates/update-template"></form>
+    <div class="modal fade" id="editEmailTemplateModal" tabindex="-1" role="dialog"
+        aria-labelledby="editEmailTemplateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editEmailTemplateModalLabel">Edit Message Template</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form id="editEmailTemplateForm">
+                        <div class="form-group">
+                            <label for="templateName">Name:</label>
+                            <input type="text" class="form-control" id="templateName" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="templateSubject">Subject:</label>
+                            <input type="text" class="form-control" id="templateSubject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="templateContent">Content:</label>
+                            <textarea class="form-control" id="templateContent" name="content" rows="10"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- and so on for other templates -->
+
+    <div id="emailTemplates"></div>   
+    <!-- Add this script at the end of your body tag to handle the modal -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $('.edit-template-button').on('click', function () {
+                var templateId = $(this).data('template-id');
+
+                // AJAX request to fetch template content
+                $.ajax({
+                    url: '/email-templates/template-content/' + templateId,
+                    method: 'GET',
+                    success: function (response) {
+                        $('#editEmailTemplateModal').find('.modal-body').html(response);
+                        $('#editEmailTemplateModal').modal('show');
+                    },
+                    error: function (error) {
+                        console.error('Error fetching template:', error);
+                    }
+                });
+            });
+        });
+        async function fetchTemplateById(templateId) {
+                try {
+                    const response = await fetch(`/api/email-templates/${templateId}`);
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch template');
+                    }
+                    const templateData = await response.json();
+                    return templateData;
+                } catch (error) {
+                    console.error('Error fetching template:', error);
+                }
+            }
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+      
+       

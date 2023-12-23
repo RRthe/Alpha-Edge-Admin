@@ -1,0 +1,208 @@
+/* Basic Reset Styles */
+html,
+body {
+    margin: 50;
+    padding: 50;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    /* Use min-height to fill at least the full viewport height */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    /* Fixed width for the sidebar */
+    background-color: #242222;
+    color: #0a0a0a;
+    /* Light color for text on dark background */
+}
+
+/* Logo Styles */
+.logo-container {
+    padding: 10px;
+    background-color: #0c0b0b;
+    text-align: center;
+    /* Center the logo */
+}
+
+.logo-container img {
+    max-width: 100%;
+    /* Ensure logo fits within the container */
+    height: auto;
+}
+
+/* Navigation Menu */
+.nav-item {
+    padding: 20px 20px;
+    margin-bottom: 100px;
+    /* Add bottom margin for space between items */
+    color: #272424;
+    /* Light text color for readability */
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.nav-item {
+    padding: 50px 50px;
+    color: #272424;
+    /* Light text color for readability */
+    text-decoration: none;
+    display: block;
+    transition: background-color 1.0s;
+    /* Smooth transition for hover effect */
+}
+
+.nav-item.active,
+.nav-item:hover {
+    background-color: #0a0808;
+    /* Slightly lighter background for hover/active */
+}
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1;
+    /* Take up the remaining width */
+    padding: 100px;
+    background-color: #0e0d0d;
+}
+
+/* User Actions */
+.user-actions {
+    text-align: right;
+    /* Align user actions to the right */
+    margin-bottom: 20px;
+    /* Add some space below the user actions */
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #0f0d0d;
+    /* Light text color for readability */
+    background-color: #9b9b9b;
+    /* Bootstrap's btn-danger color */
+    padding: 25px 20px;
+    border-radius: 10px;
+    /* Rounded corners */
+    border: none;
+    /* Remove default border */
+    font-weight: bold;
+    transition: background-color 2.0s;
+    /* Smooth transition for hover effect */
+}
+
+.user-actions a:hover {
+    background-color: #bd2130;
+    /* Darker shade on hover */
+}
+
+.percentage-container {
+    position: relative;
+}
+
+.percentage-symbol {
+    position: absolute;
+    right: 10px;
+    /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Makes it non-interactive */
+}
+
+#CreateUserContainer {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#CreateUserContainer h2 {
+    text-align: center;
+}
+
+#CreateUserContainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+#CreateUserContainer label {
+    margin-top: 10px;
+}
+
+#CreateUserContainer input {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+#CreateUserContainer button {
+    margin-top: 20px;
+    padding: 10px;
+}
+.new-user-form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.new-user-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.form-row label {
+    width: 20%;
+    min-width: 100px;
+    margin-right: 0.5rem;
+}
+
+.form-row input {
+    width: 80%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-actions {
+    text-align: right;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-save {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #f44336;
+    /* Red */
+    color: white;
+    margin-left: 0.5rem;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}

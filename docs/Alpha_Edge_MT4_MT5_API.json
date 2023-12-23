@@ -1,0 +1,85 @@
+
+  {
+    "id": "5f22bbf7-a372-433a-883c-edc5742f923e",
+    "name": "ALPHAEDGECG.COM",
+    "created": "2023-12-08T11:52:40.6320088"
+  }
+]
+# Both MT4 - MT5 Server Id's
+  {
+    "id": "d1c0f754-3629-40d8-a0b5-53c54fd820af",
+    "name": "MT5 Blueberry Markets",
+    "type": "MT5",
+    "organizationId": "5f22bbf7-a372-433a-883c-edc5742f923e",
+    "organization": {
+      "id": "5f22bbf7-a372-433a-883c-edc5742f923e",
+      "name": "ALPHAEDGECG.COM",
+      "created": "2023-12-08T11:52:40.6320088"
+    },
+    "created": "2023-12-09T06:41:48.7614308"
+  },
+  {
+    "id": "ddfb70df-34eb-4061-b6fe-afd2a5ac3233",
+    "name": "MT4 Blueberry Markets",
+    "type": "MT4",
+    "organizationId": "5f22bbf7-a372-433a-883c-edc5742f923e",
+    "organization": {
+      "id": "5f22bbf7-a372-433a-883c-edc5742f923e",
+      "name": "ALPHAEDGECG.COM",
+      "created": "2023-12-08T11:52:40.6320088"
+    },
+    "created": "2023-12-09T06:38:19.9835066"
+  }
+]
+# MT4 Server Details
+{
+  "name": "Demo2",
+  "timeout": 180,
+  "demoAccountType": "Prolong",
+  "timeOfDemo": 30,
+  "daylightCorrection": 1,
+  "timeZoneReal": 2,
+  "timeZone": 2,
+  "minClient": 400,
+  "minApi": 1,
+  "feederTimeout": 30,
+  "keepEmails": 7,
+  "endHour": 23,
+  "endMinute": 59,
+  "optimizationTime": 222,
+  "optimizationLastTime": 1703130142,
+  "optimizationCounter": 0,
+  "optimizationUnused": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "antiFlood": 1,
+  "floodControl": 150,
+  "liveUpdateMode": "No",
+  "lastOrder": 3037,
+  "lastLogin": 19937826,
+  "lostLogin": 2,
+  "rolloverMode": "Normal",
+  "overnightLastDay": 20,
+  "overnightLastTime": 1703116799,
+  "overnightPrevTime": 1703030399,
+  "overmonthLastMonth": 10,
+  "serverVersion": 400,
+  "serverBuild": 1400,
+  "statementMode": "EndDay",
+  "monthlyStatementMode": "EndMonth",
+  "keepTicks": 15,
+  "statementWeekend": 0,
+  "lastActivate": "1970-01-01T00:00:00Z",
+  "stopLast": "2023-12-18T08:15:10Z",
+  "stopDelay": 30,
+  "stopReason": "None",
+  "accountUrl": ""
+
+  

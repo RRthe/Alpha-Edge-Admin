@@ -1,0 +1,36 @@
+{
+  "template": {
+    "name": "NewUserAccount",
+    "description": "New user account created at  - Alpha Edge CG",
+    "button": {
+      "class": "btn btn-secondary btn-edit-template",
+      "data-template-id": "5",
+      "data-template-name": "NewUserAccount",
+      "text": "Edit"
+    }
+  },
+  "content": {
+    "id": "NewUserAccountTemplate", 
+    "style": "display: legacy;",
+    "textarea": {
+      "class": "form-control",
+      "name": "content",
+      "id": "description",
+      "cols": "30",
+      "rows": "10",
+      "style": "width:100%;",
+      "text": [
+        "DO NOT REPLY. THIS IS AUTOMATICALLY GENERATED EMAIL.",
+        "----------------------------------------------------------------------------------------",
+        "An account was created under this email address at {site_name}",
+        "Your email - {email}",
+        "Your user name is - {uid}",
+        "Your passcode is - {password}",
+        "Link to login to the dashboard account - {baseurl}",
+        "Thank you and good luck!",
+        "from Alpha Edge CG",
+        "---------------------------------------------------------------------------------"
+      ]
+    }
+  }
+}

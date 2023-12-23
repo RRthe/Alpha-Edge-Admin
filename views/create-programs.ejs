@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+<div class="dashboard-wrapper d-flex" id="wrapper">
+    <%- include('partials/sidebar') %> 
+
+  
+  <main class="p-4 w-100">
+    <header class="d-flex justify-content-between align-items-center pb-3">
+      <div class="header-search">
+        <input type="search" class="form-control" placeholder="Search...">
+      </div>
+      <div class="user-profile">
+        <span>Welcome, Admin</span>
+        <a href="/logout" class="btn btn-danger btn-sm ml-3">Log Out</a>
+      </div>
+    </header> 
+    <section class="content-area">
+      <class="welcome-bannermb-3">
+        <h1>Create-Programs</h1>
+        <div class="container mt-5">
+            <h2>Add your program / challenge settings</h2>
+            <form action="/api/programs/create" method="post">
+                
+                <!-- Form to Create Programs -->
+<form action="path-to-your-form-handler" method="post" class="mb-4">
+
+    <!-- Program Name -->
+    <div class="form-group">
+        <label for="programName">Program name (DO NOT USE SPECIAL CHARACTERS):</label>
+        <input type="text" id="programName" name="programName" class="form-control" value="ExampleProgramName">
+    </div>
+
+    <!-- Broker Username -->
+    <div class="form-group">
+        <label for="brokerUsername">Broker (User name of the broker as shown on the MT platform.):</label>
+        <input type="text" id="brokerUsername" name="brokerUsername" class="form-control" value="ExampleBrokerUsername">
+    </div>
+
+    <!-- Account Platform -->
+    <div class="form-group">
+        <label for="accountPlatform">Choose account platform:</label>
+        <select id="accountPlatform" name="accountPlatform" class="form-control">
+            <option value="MT4">MT4</option>
+            <option value="MT5" selected>MT5</option>
+        </select>
+    </div>
+
+    <!-- Trade Server -->
+    <div class="form-group">
+        <label for="tradeServerIP">Trade server (broker server IP where the trading accounts will be created):</label>
+        <input type="text" id="tradeServerIP" name="tradeServerIP" class="form-control" value="192.168.1.1">
+    </div>
+
+    <!-- Trade Server Group -->
+    <div class="form-group">
+        <label for="tradeServerGroup">Trade server group (group in which the trading accounts will be created - applicable only if you have manager access.):</label>
+        <input type="text" id="tradeServerGroup" name="tradeServerGroup" class="form-control" value="ExampleServerGroup">
+    </div>
+
+    <!-- Leverage -->
+    <div class="form-group">
+        <label for="leverage">Leverage:</label>
+        <input type="number" id="leverage" name="leverage" class="form-control" value="100">
+    </div>
+
+    <!-- Initial Balance -->
+    <div class="form-group">
+        <label for="initialBalance">Initial Balance:</label>
+        <input type="number" id="initialBalance" name="initialBalance" class="form-control" value="10000">
+    </div>
+
+    <!-- Max Allowed Calendar Days to Reach Target -->
+    <div class="form-group">
+        <label for="maxCalendarDaysToReachTarget">Max allowed calendar days to reach target:</label>
+        <input type="number" id="maxCalendarDaysToReachTarget" name="maxCalendarDaysToReachTarget" class="form-control" value="30">
+    </div>
+
+    <!-- Min Allowed Calendar Days to Reach Target -->
+    <div class="form-group">
+        <label for="minCalendarDaysToReachTarget">Min allowed calendar days to reach target:</label>
+        <input type="number" id="minCalendarDaysToReachTarget" name="minCalendarDaysToReachTarget" class="form-control" value="10">
+    </div>
+
+    <!-- Overall Balance Drawdown Allowed -->
+    <div class="form-group">
+        <label for="overallBalanceDrawdownAllowed">Overall Balance Drawdown Allowed (%):</label>
+        <div class="percentage-container"></div>
+        <input type="number" class="form-control" id="overallBalanceDrawdownAllowed" name="overallBalanceDrawdownAllowed" class="form-control" step="0.01" required>
+        <span class="percentage-symbol">%</span>
+    </div>
+
+    <!-- Overall Equity Drawdown Allowed -->
+    <div class="form-group">
+        <label for="overallEquityDrawdownAllowed">Overall Equity Drawdown Allowed (%):</label>
+        <div class="percentage-container"></div>
+        <input type="number" class="form-control" id="overallEquityDrawdownAllowed" name="overallEquityDrawdownAllowed" class="form-control" step="0.01" required>
+        <span class="percentage-symbol">%</span>
+    </div>
+
+    <!-- Daily Balance Drawdown Allowed -->
+    <div class="form-group">
+        <label for="dailyBalanceDrawdownAllowed">Daily Balance Drawdown Allowed (%):</label>
+        <div class="percentage-container"></div>
+        <input type="number" class="form-control" id="dailyBalanceDrawdownAllowed" name="dailyBalanceDrawdownAllowed" class="form-control" step="0.01" required>
+        <span class="percentage-symbol">%</span>
+    </div>
+
+    <!-- Include Floating P/L in the Daily Balance DD -->
+    <div class="form-group">
+        <label for="includeFloatingPLInDailyBalanceDD">Include Floating P/L in the Daily Balance DD:</label>
+        <select id="includeFloatingPLInDailyBalanceDD" name="includeFloatingPLInDailyBalanceDD" class="form-control">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+    </div>
+
+    <!-- Growth Target for Balance -->
+    <div class="form-group">
+        <label for="growthTargetForBalance">Growth Target for Balance (% or absolute figure):</label>
+        <div class="percentage-container"></div>
+        <input type="number" class="form-control" id="growthTargetForBalance" name="growthTargetForBalance" class="form-control" step="0.01" required>
+        <span class="percentage-symbol">%</span>
+    </div>
+
+    <!-- Number of Retakes Allowed -->
+    <div class="form-group">
+        <label for="numberRetakesAllowed">Number of Retakes Allowed:</label>
+        <input type="number" id="numberRetakesAllowed" name="numberRetakesAllowed" class="form-control" step="0.01" required>
+    </div>
+
+    <!-- Choose which Program to use to Create Next Stage Account -->
+    <div class="form-group">
+        <label for="nextStageProgram">Choose which Program to use to Create Next Stage Account:</label>
+        <select id="nextStageProgram" name="nextStageProgram" class="form-control">
+            <option value="program1">Program 1</option>
+            <option value="program2">Program 2</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+
+    <!-- Other Details -->
+    <div class="form-group">
+        <label for="otherDetails">Other Details:</label>
+        <textarea id="otherDetails" name="otherDetails" class="form-control" rows="3"></textarea>
+    </div>
+
+    <!-- Product ID -->
+    <div class="form-group">
+        <label for="woocommerceProductId">Product ID (WooCommerce ID):</label>
+        <input type="text" id="woocommerceProductId" name="woocommerceProductId" class="form-control" required>
+    </div>
+
+    <!-- Admin Emails -->
+    <!-- Note: These should correspond to the structure of the 'adminEmails' object in your schema -->
+    <input type="hidden" name="adminEmails[maxTradingDaysAlert]" value="info@alphaedgecg.com">
+    <input type="hidden" name="adminEmails[minTargetDaysAlert]" value="info@alphaedgecg.com">
+    <input type="hidden" name="adminEmails[overallBalanceDrawdownAlert]" value="info@alphaedgecg.com">
+    <input type="hidden" name="adminEmails[overallEquityDrawdownAlert]" value="info@alphaedgecg.com">
+    <input type="hidden" name="adminEmails[dailyBalanceDrawdownAlert]" value="info@alphaedgecg.com">
+    <input type="hidden" name="adminEmails[traderReachesTargetAlert]" value="info@alphaedgecg.com">
+    <input type="hidden" name="adminEmails[newApplicationsAlert]" value="info@alphaedgecg.com">
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form> 
+            </div>           
+        </div>
+      <!-- Add content blocks, charts, etc. -->
+    </section>
+  </main>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="main.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

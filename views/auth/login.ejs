@@ -1,0 +1,70 @@
+<%- contentFor('HeaderCss') %>
+<%-include("../partials/title-meta", { "title" : "Login" }) %>
+<%- contentFor('body') %>
+<div class="account-pages my-5 pt-sm-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 col-xl-5">
+        <div class="card overflow-hidden">
+          <div class="card-body pt-0">
+            <h3 class="text-center mt-5 mb-4">
+              <a href="/index" class="d-block auth-logo">
+                <img src="/assets/images/logo-dark.png" alt="" height="30" class="auth-logo-dark">
+                <img src="/assets/images/logo-light.png" alt="" height="30" class="auth-logo-light">
+              </a>
+            </h3>
+            <div class="p-3">
+              <h4 class="text-muted font-size-18 mb-1 text-center">Welcome Back !</h4>
+              <p class="text-muted text-center">Sign in to continue to Lexa.</p>
+              <% if(message.length> 0) { %>
+              <div class="alert alert-success text-center mb-4 flash" role="alert">
+                <%= message %>
+              </div>
+              <% } %>
+              <% if(error.length> 0) { %>
+              <div class="alert alert-danger text-center mb-4 flash" role="alert">
+                <%= error %>
+              </div>
+              <% } %>
+              <form action="/auth-validate" method="post">
+                <div class="mb-3">
+                  <label for="Email" class="fw-semibold">Email</label>
+                  <input type="text" class="form-control" value="admin@themesbrand.com" id="Email" name="email" required placeholder="Enter Email">
+                </div>
+                <div class="mb-3 mb-4">
+                  <label for="userpassword" class="fw-semibold">Password</label>
+                  <input type="password" class="form-control" value="123456" name="password" required minlength="5" id="userpassword" placeholder="Enter password">
+                </div>
+                <div class="row align-items-center">
+                  <div class="col-6">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input font-size-16" id="remember-check">
+                      <label class="form-check-label" for="remember-check">Remember me</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-end">
+                      <button class="btn btn-primary w-md waves-effect waves-light" type="submit">Log
+                        In</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <a href="/forgotpassword" class="text-muted"><i class="mdi mdi-lock me-1"></i>
+                    Forgot your password?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 text-center">
+          <p>Don't have an account ? <a href="/register" class="text-primary"> Signup Now </a></p>
+          © <script>
+            document.write(new Date().getFullYear())
+          </script> Lexa <span class="d-none d-sm-inline-block"> - Crafted with <i class="mdi mdi-heart text-danger"></i> </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- contentFor('FooterJs') %>

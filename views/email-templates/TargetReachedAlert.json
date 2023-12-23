@@ -1,0 +1,45 @@
+{
+  "showTargetReachedAlert": true,
+  "template": {
+    "name": "TargetReachedAlert",
+    "description": "TargetReachedAlert - Alpha Edge CG",
+    "button": {
+      "class": "btn btn-secondary btn-edit-template",
+      "data-template-id": "8",
+      "data-template-name": "TargetReachedAlert",
+      "text": "Edit"
+    }
+  },
+  "content": {
+    "id": "targetReachedAlertTemplate",
+    "style": "display: none;",
+    "rows": [
+      {
+        "columns": [
+          {
+            "data": [
+              {
+                "text": "DO NOT REPLY. THIS IS AUTO-GENERATED EMAIL."
+              },
+              {
+                "text": "Congratulations! Our system detected that you have reached the target for account <%= uacc %> under program <%= pname %> at Alpha Edge CG."
+              },
+              {
+                "text": "Please contact us for further instructions."
+              },
+              {
+                "text": "Admin"
+              },
+              {
+                "text": "Alpha Edge CG"
+              },
+              {
+                "text": "https://alphaedgecg.com"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

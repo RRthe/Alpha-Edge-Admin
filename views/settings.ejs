@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
+
+<link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+<div class="dashboard-wrapper d-flex" id="wrapper">
+  <%- include('partials/sidebar') %> 
+
+  
+  <main class="p-4 w-100">
+    <header class="d-flex justify-content-between align-items-center pb-3">
+      <div class="header-search">
+        <input type="search" class="form-control" placeholder="Search...">
+      </div>
+      <div class="user-profile">
+        <span>Welcome, Admin</span>
+        <a href="/logout" class="btn btn-danger btn-sm ml-3">Log Out</a>
+      </div>
+    </header>   
+    <section class="content-area">
+      <div class="welcome-banner mb-3">
+        <h1></h1>
+      </div>
+      <h1>Dashboard Settings</h1>
+      
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card Dcat_Admin_Widgets_Card" id="card-Qaw6RV3x">
+            <div class="card-body"></div>
+
+              <form method="POST" class="form-horizontal" accept-charset="UTF-8" pjax-container="1"
+                action="/api/dashboardForm.js" id="form-RbECMe5i">
+                <div class="box-body fields-group pl-0 pr-0 pt-1" style="padding: 0 0 .5rem">
+                  <div>
+                    <ul class="nav nav-tabs pl-1" style="margin-top: -1rem">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#basic" data-toggle="tab">
+                          Basic <i class="feather icon-alert-circle has-tab-error text-danger d-none"></i>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#login_n_registration" data-toggle="tab">
+                          Login and Registration <i class="feather icon-alert-circle has-tab-error text-danger d-none"></i>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#logos-and-favicons" data-toggle="tab">
+                          Logos and Favicons <i class="feather icon-alert-circle has-tab-error text-danger d-none"></i>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#custom-style" data-toggle="tab">
+                          Custom Style <i class="feather icon-alert-circle has-tab-error text-danger d-none"></i>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#webhooks" data-toggle="tab">
+                          External Webhooks <i class="feather icon-alert-circle has-tab-error text-danger d-none"></i>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="tab-content fields-group mt-2 pt-1 pb-1">
+                      <div class="tab-pane active" id="basic">
+                        <div class="form-group row form-field">
+                          <div class="col-md-2 text-capitalize control-label">
+                            <span>Powered by text</span>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <div class="input-group">
+                              <span class="input-group-prepend"><span class="input-group-text bg-white"><i
+                                    class="feather icon-edit-2"></i></span></span>
+                              <input type="text" name="admin_powered" value="Powered" class="form-control field_admin_powered _normal_"
+                                placeholder="Input Powered by text">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row form-field">
+                          <div class="col-md-2 text-capitalize control-label">
+                            <span>Site Name</span>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <div class="input-group">
+                              <span class="input-group-prepend"><span class="input-group-text bg-white"><i
+                                    class="feather icon-edit-2"></i></span></span>
+                              <input type="text" name="admin_name" value="funded.app" class="form-control field_admin_name _normal_"
+                                placeholder="Input Site Name">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row form-field">
+                          <div class="col-md-2 text-capitalize control-label">
+                            <span>Site Title</span>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <div class="input-group">
+                              <span class="input-group-prepend"><span class="input-group-text bg-white"><i
+                                    class="feather icon-edit-2"></i></span></span>
+                              <input type="text" name="admin_title" value="funded.app" class="form-control field_admin_title _normal_"
+                                placeholder="Input Site Title">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row form-field">
+                          <label class="col-md-2 text-capitalize control-label">Top Menu?</label>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <input name="admin_layout_horizontal-menu" type="hidden" value="0">
+                            <input type="checkbox" name="admin_layout_horizontal-menu" class="field_admin_layout_horizontal-menu _normal_"
+                              data-size="small" data-color="#586cb1" value="1" data-plugin="form-30AZLfkvswitchery" initialized="1"
+                              id="_ab024b886700392" data-switchery="true" style="display: none;">
+                            <span class="switchery switchery-small"
+                              style="box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; border-color: rgb(223, 223, 223); background-color: rgb(255, 255, 255); transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s;">
+                              <small style="left: 0px; transition: background-color 0.4s ease 0s, left 0.2s ease 0s;"></small></span>
+                          </div>
+                        </div>
+                        <div class="form-group row form-field">
+                          <label class="col-md-2 text-capitalize control-label">Contact Us Enabled</label>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <input name="admin_contactus-enabled" type="hidden" value="0">
+                            <input type="checkbox" name="admin_contactus-enabled" class="field_admin_contactus-enabled _normal_" checked=""
+                              data-size="small" data-color="#586cb1" value="1" data-plugin="form-30AZLfkvswitchery" initialized="1"
+                              id="_554ba81a8626715" data-switchery="true" style="display: none;"><span class="switchery switchery-small"
+                              style="background-color: rgb(88, 108, 177); border-color: rgb(88, 108, 177); box-shadow: rgb(88, 108, 177) 0px 0px 0px 11px inset; transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s, background-color 1.2s ease 0s;"><small
+                                style="left: 13px; background-color: rgb(255, 255, 255); transition: background-color 0.4s ease 0s, left 0.2s ease 0s;"></small></span>
+                          </div>
+                        </div>
+                        <div class="form-group row form-field">
+                          <label class="col-md-2 text-capitalize control-label">Dark Mode Switch</label>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <input name="admin_layout_dark-mode-switch" type="hidden" value="0">
+                            <input type="checkbox" name="admin_layout_dark-mode-switch" class="field_admin_layout_dark-mode-switch _normal_"
+                              checked="" data-size="small" data-color="#586cb1" value="1" data-plugin="form-30AZLfkvswitchery" initialized="1"
+                              id="_792532025b622b9" data-switchery="true" style="display: none;"><span class="switchery switchery-small"
+                              style="background-color: rgb(88, 108, 177); border-color: rgb(88, 108, 177); box-shadow: rgb(88, 108, 177) 0px 0px 0px 11px inset; transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s, background-color 1.2s ease 0s;"><small
+                                style="left: 13px; background-color: rgb(255, 255, 255); transition: background-color 0.4s ease 0s, left 0.2s ease 0s;"></small></span>
+                          </div>
+                        </div>
+                        <div class="form-group row form-field">
+                          <div class="col-md-2 text-capitalize control-label">
+                            <span>Contact Us Link</span>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <div class="input-group">
+                              <span class="input-group-prepend"><span class="input-group-text bg-white"><i
+                                    class="feather icon-edit-2"></i></span></span>
+                              <input type="text" name="admin_contactus-link" value="" class="form-control field_admin_contactus-link _normal_"
+                                placeholder="Input Contact Us Link">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row form-field">
+                          <div class="col-md-2 text-capitalize control-label">
+                            <span>WordPress Host</span>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <div class="input-group">
+                              <span class="input-group-prepend"><span class="input-group-text bg-white"><i
+                                    class="feather icon-edit-2"></i></span></span>
+                              <input type="text" name="admin_wordpress_host" value="" class="form-control field_admin_wordpress_host _normal_"
+                                placeholder="Input WordPress Host">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row form-field">
+                          <div class="col-md-2 text-capitalize control-label">
+                            <span>WordPress Client ID</span>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <div class="input-group">
+                              <span class="input-group-prepend"><span class="input-group-text bg-white"><i
+                                    class="feather icon-edit-2"></i></span></span>
+                              <input type="text" name="admin_wordpress_client-id" value=""
+                                class="form-control field_admin_wordpress_client-id _normal_" placeholder="Input WordPress Client ID">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row form-field">
+                          <div class="col-md-2 text-capitalize control-label">
+                            <span>WordPress Client Secret</span>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <div class="input-group">
+                              <span class="input-group-prepend"><span class="input-group-text bg-white"><i
+                                    class="feather icon-edit-2"></i></span></span>
+                              <input type="text" name="admin_wordpress_client-secret" value=""
+                                class="form-control field_admin_wordpress_client-secret _normal_" placeholder="Input WordPress Client Secret">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row form-field">
+                          <div class="col-md-2 text-capitalize control-label">
+                            <span>Menu Style</span>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <input type="hidden" name="admin_layout_sidebar-style">
+                            <div class="d-flex flex-wrap">
+                              <div class="vs-radio-con vs-radio-primary" style="margin-right: 16px">
+                                <input value="light" name="admin_layout_sidebar-style"
+                                  class="field_admin_layout_sidebar-style _normal_ Dcat_Admin_Widgets_Radio" type="radio">
+                                <span class="vs-radio vs-radio-">
+                                  <span class="vs-radio--border"></span>
+                                  <span class="vs-radio--circle"></span>
+                                </span>
+                                <span>Light</span>
+                              </div>
+                              <div class="vs-radio-con vs-radio-primary" style="margin-right: 16px">
+                                <input value="dark" name="admin_layout_sidebar-style"
+                                  class="field_admin_layout_sidebar-style _normal_ Dcat_Admin_Widgets_Radio" type="radio" checked="">
+                                <span class="vs-radio vs-radio-">
+                                  <span class="vs-radio--border"></span>
+                                  <span class="vs-radio--circle"></span>
+                                </span>
+                                <span>Dark</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="form-group row form-field">
+                          <div class="col-md-2 text-capitalize control-label">
+                            <span>Some Other Field</span>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <div class="input-group">
+                              <span class="input-group-prepend"><span class="input-group-text bg-white"><i
+                                    class="feather icon-edit-2"></i></span></span>
+                              <input type="text" name="admin_some-other-field" value=""
+                                class="form-control field_admin_some-other-field _normal_" placeholder="Input Some Other Field">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row form-field">
+                          <div class="col-md-2 text-capitalize control-label">
+                            <span>Additional Field 1</span>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <div class="input-group">
+                              <span class="input-group-prepend"><span class="input-group-text bg-white"><i
+                                    class="feather icon-edit-2"></i></span></span>
+                              <input type="text" name="admin_additional-field-1" value=""
+                                class="form-control field_admin_additional-field-1 _normal_" placeholder="Input Additional Field 1">
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="form-group row form-field">
+                          <div class="col-md-2 text-capitalize control-label">
+                            <span>Additional Field 2</span>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="help-block with-errors"></div>
+                            <div class="input-group">
+                              <span class="input-group-prepend"><span class="input-group-text bg-white"><i
+                                    class="feather icon-edit-2"></i></span></span>
+                              <input type="text" name="admin_additional-field-2" value=""
+                                class="form-control field_admin_additional-field-2 _normal_" placeholder="Input Additional Field 2">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane active" id="basic">
+                        <div class="form-group row form-field">
+                          <label class="col-md-2 text-capitalize control-label">
+                            Powered by text
+                          </label>
+                          <div class="col-md-10">
+                            <!-- Input field for Powered by text -->
+                            <input type="text" class="form-control" name="powered_by_text"
+                              placeholder="Enter Powered by text">
+                          </div>
+                        </div>
+                        <!-- Add more form fields for the Basic tab here -->
+                      </div>
+      
+                      <!-- Login and Registration Tab Content -->
+                      <div class="tab-pane" id="login_n_registration">
+                        <form action="/update-settings" method="post">
+                          <div class="setting">
+                            <label>Allow Registration</label>
+                            <input type="checkbox" name="allow_registration" <% if (settings.allow_registration) { %>checked<% } %>>
+                          </div>
+                          <div class="setting">
+                            <label>Registration Activation Required</label>
+                            <input type="checkbox" name="activation_required" <% if (settings.activation_required) { %>checked<% } %>>
+                          </div>
+                          <div class="setting">
+                            <label>Allow Reset Password</label>
+                            <input type="checkbox" name="allow_reset_password" <% if (settings.allow_reset_password) { %>checked<% } %>>
+                          </div>
+                          <!-- Add your reCAPTCHA settings here -->
+                          <button type="submit">Submit</button>
+                        </form>
+
+                      </div>
+      
+                      <!-- Logos and Favicons Tab Content -->
+                      <div class="tab-pane" id="logos-and-favicons">
+                        <!-- Add form fields for the Logos and Favicons tab here -->
+                      </div>
+      
+                      <!-- Custom Style Tab Content -->
+                      <div class="tab-pane" id="custom-style">
+                        <!-- Add form fields for the Custom Style tab here -->
+                      </div>
+      
+                      <!-- External Webhooks Tab Content -->
+                      <div class="tab-pane" id="webhooks">
+                        <!-- Add form fields for the External Webhooks tab here -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      
+    </section>
+  </main>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="main.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

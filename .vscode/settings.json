@@ -1,0 +1,34 @@
+{
+    "cSpell.words": [
+        "alerttype",
+        "ALPHAEDGECG",
+        "blueberrymarkets",
+        "CEORR",
+        "ckeditor",
+        "CPLUGIN",
+        "ipass",
+        "masterpassword",
+        "metaapi",
+        "METATRADER",
+        "mpass",
+        "oidc",
+        "openapi",
+        "overmonth",
+        "pname",
+        "redoc",
+        "resave",
+        "tradeserver",
+        "uacc",
+        "upass",
+        "woocommerce"
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".mule": true
+    }
+}

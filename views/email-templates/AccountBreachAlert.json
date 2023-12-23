@@ -1,0 +1,33 @@
+{
+  "template": {
+    "name": "AccountBreachAlert",
+    "description": "Account Breach Alert- Alpha Edge CG",
+    "button": {
+      "class": "btn btn-secondary btn-edit-template",
+      "data-template-id": "1",
+      "data-template-name": "NewTradingAccount",
+      "text": "Edit"
+    }
+  },
+  "content": {
+    "id": "AccountBreachAlertTemplate", 
+    "style": "display: legacy;",
+    "textarea": {
+      "class": "form-control",
+      "name": "content",
+      "id": "description",
+      "cols": "30",
+      "rows": "20",
+      "style": "width:100%;",
+      "text": [
+        "DO NOT REPLY. THIS IS AUTOMATICALLY GENERATED EMAIL.",
+        "----------------------------------------------------------------------------------------",
+        "Our monitoring system detected an account breach in your account {uacc} under our program {pname} of type - {alerttype}",
+        "If you wish to see the values at the time of the alert such as account balance, equity etc, you need to visit the dashboard for this account.",
+        "Admin",
+        "from Alpha Edge CG",
+        "---------------------------------------------------------------------------------"
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "template": {
+    "name": "PayoutRequest",
+    "description": "{uacc} - Payout Request",
+    "button": {
+      "class": "btn btn-secondary btn-edit-template",
+      "data-template-id": "8",
+      "data-template-name": "PayoutRequest",
+      "text": "Edit"
+    }
+  },
+  "content": {
+    "id": "PayoutRequestTemplate", 
+    "style": "display: legacy;",
+    "textarea": {
+      "class": "form-control",
+      "name": "content",
+      "id": "description",
+      "cols": "30",
+      "rows": "10",
+      "style": "width:100%;",
+      "text": [
+        "DO NOT REPLY. THIS IS AUTOMATICALLY GENERATED EMAIL.",
+        "----------------------------------------------------------------------------------------",
+        "Hello {first_name},",
+        "After your first withdrawal, you will be eligible for you next withdrawal 15 days after your next trade is placed!",
+        "Withdrawal request details",
+        "Date Requested: {requested_date}",
+        "Account Login: {uacc}",
+        "Withdrawal Amount: {withdraw_amount}",
+        "Payout Method: {payout_method}",
+        "Status: Pending Review",
+        "Regards,",
+        "from Alpha Edge CG",
+        "---------------------------------------------------------------------------------"
+      ]
+    }
+  }
+}
